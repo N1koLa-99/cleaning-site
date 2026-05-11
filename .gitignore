@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
+.claude/
+
+# Оригинални (неоптимизирани) снимки — не се използват в сайта
+CleaningApertment.jpg
+GeneralCleaining.jpg
+Stairs.jpg

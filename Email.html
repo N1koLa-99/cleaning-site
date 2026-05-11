@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="color-scheme" content="light only">
+  <meta name="supported-color-schemes" content="light">
+  <title>Мото Зона — Партньорство</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body,
+    html {
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #ffffff !important;
+    }
+
+    body {
+      font-family: 'Barlow', 'Segoe UI', Arial, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+      mso-table-lspace: 0;
+      mso-table-rspace: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    :root {
+      color-scheme: light only;
+      supported-color-schemes: light;
+    }
+
+    /*
+      Gmail Dark Mode fix.
+      Това пази белите текстове върху оранжев фон да не стават черни.
+    */
+    u + .body .gmail-blend-screen {
+      background: #000000;
+      mix-blend-mode: screen;
+    }
+
+    u + .body .gmail-blend-difference {
+      background: #000000;
+      mix-blend-mode: difference;
+    }
+
+    u + .body .gmail-white {
+      color: #ffffff !important;
+    }
+
+    u + .body .gmail-muted {
+      color: rgba(255,255,255,0.82) !important;
+    }
+
+    u + .body .gmail-soft {
+      color: rgba(255,255,255,0.45) !important;
+    }
+
+    /* Outlook / Samsung / other dark mode helpers */
+    [data-ogsc] body,
+    [data-ogsc] html,
+    [data-ogsc] #outer {
+      background-color: #111111 !important;
+    }
+
+    [data-ogsc] .white {
+      background-color: #1a1a1a !important;
+    }
+
+    [data-ogsc] .card-bg {
+      background-color: #222222 !important;
+      border-color: #333333 !important;
+    }
+
+    [data-ogsc] .dark-text {
+      color: #ffffff !important;
+    }
+
+    [data-ogsc] .mid-text {
+      color: #cccccc !important;
+    }
+
+    [data-ogsc] .light-text {
+      color: #aaaaaa !important;
+    }
+
+    [data-ogsc] .divider {
+      background-color: #333333 !important;
+    }
+
+    [data-ogsc] .cf {
+      color: #cccccc !important;
+    }
+
+    [data-ogsc] .comp-head {
+      color: #888888 !important;
+    }
+
+    [data-ogsc] .comp-row-alt {
+      background-color: #222222 !important;
+    }
+
+    [data-ogsc] .comp-row {
+      background-color: #1a1a1a !important;
+    }
+
+    [data-ogsc] .footer-bg {
+      background-color: #111111 !important;
+    }
+
+    [data-ogsc] .footer-text {
+      color: #777777 !important;
+    }
+
+    [data-ogsc] .footer-strong {
+      color: #ffffff !important;
+    }
+
+    [data-ogsc] .orange-bg {
+      background-color: #ff5c1a !important;
+    }
+
+    [data-ogsc] .force-white {
+      color: #ffffff !important;
+    }
+
+    [data-ogsc] .force-muted-white {
+      color: rgba(255,255,255,0.82) !important;
+    }
+
+    [data-ogsc] .force-soft-white {
+      color: rgba(255,255,255,0.45) !important;
+    }
+
+    [data-ogsc] .cta-btn {
+      background-color: #ffffff !important;
+      color: #ff5c1a !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body,
+      html,
+      #outer {
+        background-color: #111111 !important;
+      }
+
+      .white {
+        background-color: #1a1a1a !important;
+      }
+
+      .card-bg {
+        background-color: #222222 !important;
+        border-color: #333333 !important;
+      }
+
+      .dark-text {
+        color: #ffffff !important;
+      }
+
+      .mid-text {
+        color: #cccccc !important;
+      }
+
+      .light-text {
+        color: #aaaaaa !important;
+      }
+
+      .divider {
+        background-color: #333333 !important;
+      }
+
+      .cf {
+        color: #cccccc !important;
+      }
+
+      .comp-head {
+        color: #888888 !important;
+      }
+
+      .comp-row-alt {
+        background-color: #222222 !important;
+      }
+
+      .comp-row {
+        background-color: #1a1a1a !important;
+      }
+
+      .footer-bg {
+        background-color: #111111 !important;
+      }
+
+      .footer-text {
+        color: #777777 !important;
+      }
+
+      .footer-strong {
+        color: #ffffff !important;
+      }
+
+      .orange-bg {
+        background-color: #ff5c1a !important;
+      }
+
+      .force-white {
+        color: #ffffff !important;
+      }
+
+      .force-muted-white {
+        color: rgba(255,255,255,0.82) !important;
+      }
+
+      .force-soft-white {
+        color: rgba(255,255,255,0.45) !important;
+      }
+
+      .cta-btn {
+        background-color: #ffffff !important;
+        color: #ff5c1a !important;
+      }
+    }
+
+    @media only screen and (max-width: 620px) {
+      .card {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .pad {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+
+      .htitle {
+        font-size: 34px !important;
+        line-height: 1.05 !important;
+      }
+
+      .cta-btn {
+        padding: 14px 24px !important;
+        font-size: 12px !important;
+      }
+
+      .cf {
+        font-size: 11px !important;
+        padding: 9px 8px !important;
+      }
+
+      .cv {
+        padding: 9px 4px !important;
+        font-size: 14px !important;
+      }
+
+      .gcell {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 10px !important;
+      }
+
+      .ggap {
+        display: none !important;
+      }
+
+      .free-left,
+      .free-right {
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding-left: 0 !important;
+      }
+
+      .free-right {
+        margin-top: 12px !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="body" style="margin:0;padding:0;background:#ffffff !important;">
+<table id="outer" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="background:#ffffff !important;margin:0;padding:0;">
+  <tr>
+    <td align="center" style="padding:0;margin:0;" bgcolor="#ffffff">
+
+      <table role="presentation" class="card" width="580" cellpadding="0" cellspacing="0" border="0" style="width:580px;max-width:580px;">
+
+        <!-- HERO -->
+        <tr>
+          <td bgcolor="#ff5c1a" class="pad orange-bg" style="background:#ff5c1a !important;padding:40px 44px 36px;">
+
+            <div class="gmail-blend-screen">
+              <div class="gmail-blend-difference">
+
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:28px;">
+                  <tr>
+                    <td style="vertical-align:middle;padding-right:12px;">
+                      <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td bgcolor="#ffffff26" style="width:44px;height:44px;border-radius:10px;text-align:center;vertical-align:middle;font-size:20px;padding:0 10px;">
+                            🔥
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+
+                    <td style="vertical-align:middle;">
+                      <div class="force-white gmail-white" style="color:#ffffff !important;font-size:18px;font-weight:900;letter-spacing:3px;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;text-transform:uppercase;line-height:1;">
+                        МОТО ЗОНА
+                      </div>
+
+                      <div class="force-muted-white gmail-muted" style="color:rgba(255,255,255,0.75) !important;font-size:9px;letter-spacing:3px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;margin-top:3px;">
+                        moto-zona.com
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+                  <tr>
+                    <td style="background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.25);border-radius:4px;padding:4px 12px;">
+                      <span class="force-white gmail-white" style="color:#ffffff !important;font-size:9px;font-weight:600;letter-spacing:3px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+                        Покана за партньорство
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+
+                <div class="htitle force-white gmail-white" style="font-size:50px;font-weight:900;line-height:0.95;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;color:#ffffff !important;margin-bottom:0;">
+                  ВАШИТЕ ОБЯВИ<br>
+                  <span class="force-soft-white gmail-soft" style="color:rgba(255,255,255,0.45) !important;">ПРЕД</span><br>
+                  ПРАВИЛНИТЕ ХОРА.
+                </div>
+
+                <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:18px 0;">
+                  <tr>
+                    <td style="width:40px;height:3px;background:rgba(255,255,255,0.45);font-size:0;line-height:0;">&nbsp;</td>
+                  </tr>
+                </table>
+
+                <div class="force-muted-white gmail-muted" style="color:rgba(255,255,255,0.90) !important;font-size:14px;font-weight:400;line-height:1.8;font-family:'Barlow','Segoe UI',Arial,sans-serif;max-width:420px;">
+                  Вие имате мото стока за продаване. Ние имаме точната
+                  <strong class="force-white gmail-white" style="color:#ffffff !important;">аудитория, която я търси.</strong>
+                </div>
+
+              </div>
+            </div>
+
+          </td>
+        </tr>
+
+        <!-- INTRO -->
+        <tr>
+          <td class="pad white" bgcolor="#fef9f6" style="background:#fef9f6 !important;padding:36px 44px 30px;">
+            <div style="color:#ff5c1a !important;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;margin-bottom:12px;">
+              Защо Мото Зона
+            </div>
+
+            <div class="dark-text" style="font-size:26px;font-weight:900;color:#111111 !important;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;margin-bottom:16px;line-height:1.1;">
+              Първата платформа в България,<br>
+              създадена само за мото общността.
+            </div>
+
+            <p class="mid-text" style="margin:0;color:#555555 !important;font-size:14px;line-height:1.85;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+              В OLX, Mobile и Marketplace вашите мото обяви се губят между хиляди автомобили. Купувачите ги намират трудно — а понякога изобщо не ги намират.
+              <strong class="dark-text" style="color:#111111 !important;">moto-zona.com</strong>
+              решава точно това: платформа, където всеки посетител е дошъл с намерение да купи мотор, екипировка или части.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td bgcolor="#e8e8e8" class="divider" style="height:1px;font-size:0;line-height:0;background:#e8e8e8 !important;">&nbsp;</td>
+        </tr>
+
+        <!-- FREE STRIPE -->
+        <tr>
+          <td bgcolor="#ff5c1a" class="orange-bg" style="background:#ff5c1a !important;padding:0;">
+
+            <div class="gmail-blend-screen">
+              <div class="gmail-blend-difference">
+
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td class="pad" style="padding:20px 44px;">
+                      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td class="free-left" style="vertical-align:middle;">
+                            <div class="force-muted-white gmail-muted" style="color:rgba(255,255,255,0.78) !important;font-size:9px;letter-spacing:3px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;margin-bottom:3px;">
+                              ⚡ СПЕЦИАЛНА ОФЕРТА ЗА ПЪРВИТЕ
+                            </div>
+
+                            <div class="force-white gmail-white" style="color:#ffffff !important;font-size:22px;font-weight:900;letter-spacing:1px;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;text-transform:uppercase;">
+                              Добре дошли с подарък
+                            </div>
+                          </td>
+
+                          <td class="free-right" style="vertical-align:middle;text-align:right;padding-left:16px;white-space:nowrap;">
+                            <div class="force-muted-white gmail-muted" style="color:rgba(255,255,255,0.92) !important;font-size:12px;line-height:1.9;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+                              2 месеца без ограничение в броя обяви<br>
+                              10 безплатни ВИП обяви<br>
+                              10 безплатни ТОП обяви
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+              </div>
+            </div>
+
+          </td>
+        </tr>
+
+        <tr>
+          <td bgcolor="#e8e8e8" class="divider" style="height:1px;font-size:0;line-height:0;background:#e8e8e8 !important;">&nbsp;</td>
+        </tr>
+
+        <!-- 4 CARDS -->
+        <tr>
+          <td class="pad white" bgcolor="#fef9f6" style="background:#fef9f6 !important;padding:32px 44px;">
+            <div style="color:#ff5c1a !important;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;margin-bottom:18px;">
+              С какво сме по-добри
+            </div>
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;">
+              <tr>
+                <td class="gcell card-bg" width="49%" valign="top" bgcolor="#fdf5f0" style="background:#fdf5f0 !important;border:1px solid #efefef;border-radius:8px;padding:18px 16px;">
+                  <div style="font-size:20px;margin-bottom:10px;">🎯</div>
+                  <div class="dark-text" style="color:#111111 !important;font-size:13px;font-weight:800;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px;">
+                    100% мото аудитория
+                  </div>
+                  <div class="light-text" style="color:#777777 !important;font-size:12px;line-height:1.7;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+                    Всеки, който отвори сайта, вече търси мотор. Не го убеждавате — той вече е убеден. Вие само трябва да сте там.
+                  </div>
+                </td>
+
+                <td class="ggap" width="2%"></td>
+
+                <td class="gcell card-bg" width="49%" valign="top" bgcolor="#fdf5f0" style="background:#fdf5f0 !important;border:1px solid #efefef;border-radius:8px;padding:18px 16px;">
+                  <div style="font-size:20px;margin-bottom:10px;">🔍</div>
+                  <div class="dark-text" style="color:#111111 !important;font-size:13px;font-weight:800;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px;">
+                    Продай А2 мотор с мощност на А
+                  </div>
+                  <div class="light-text" style="color:#777777 !important;font-size:12px;line-height:1.7;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+                    Много мотори са регистрирани за А2, но с мощност за А категория. Нашият филтър го прави лесно — купувачът с А2 книжка вижда точно тях. Никъде другаде в България го няма.
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td class="gcell card-bg" width="49%" valign="top" bgcolor="#fdf5f0" style="background:#fdf5f0 !important;border:1px solid #efefef;border-radius:8px;padding:18px 16px;">
+                  <div style="font-size:20px;margin-bottom:10px;">🌍</div>
+                  <div class="dark-text" style="color:#111111 !important;font-size:13px;font-weight:800;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px;">
+                    Пазар отвъд България
+                  </div>
+                  <div class="light-text" style="color:#777777 !important;font-size:12px;line-height:1.7;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+                    Платформата е нагласена за износ. Скоро обявите ви ще достигат до купувачи от Румъния, Гърция, Сърбия и Македония — без допълнителни усилия.
+                  </div>
+                </td>
+
+                <td class="ggap" width="2%"></td>
+
+                <td class="gcell card-bg" width="49%" valign="top" bgcolor="#fdf5f0" style="background:#fdf5f0 !important;border:1px solid #efefef;border-radius:8px;padding:18px 16px;">
+                  <div style="font-size:20px;margin-bottom:10px;">📈</div>
+                  <div class="dark-text" style="color:#111111 !important;font-size:13px;font-weight:800;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;letter-spacing:0.5px;text-transform:uppercase;margin-bottom:6px;">
+                    Ранен достъп = предимство
+                  </div>
+                  <div class="light-text" style="color:#777777 !important;font-size:12px;line-height:1.7;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+                    Платформата расте. Фирмите, които влязат сега, изграждат видимост преди конкурентите им. Безплатно и без риск.
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td bgcolor="#e8e8e8" class="divider" style="height:1px;font-size:0;line-height:0;background:#e8e8e8 !important;">&nbsp;</td>
+        </tr>
+
+        <!-- COMPARISON -->
+        <tr>
+          <td class="pad white" bgcolor="#fef9f6" style="background:#fef9f6 !important;padding:32px 44px;">
+            <div style="color:#ff5c1a !important;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;margin-bottom:14px;">
+              Мото Зона срещу конкуренцията
+            </div>
+
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border:1px solid #efefef;border-radius:8px;overflow:hidden;">
+              <tr bgcolor="#fdf0e8" class="comp-row-alt" style="background:#fdf0e8 !important;">
+                <td class="cf comp-head" style="padding:10px 14px;color:#bbbbbb !important;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;font-family:'Barlow','Segoe UI',Arial,sans-serif;border-bottom:1px solid #efefef;"></td>
+
+                <td class="cf comp-head" style="padding:10px 14px;color:#bbbbbb !important;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;text-align:center;font-family:'Barlow','Segoe UI',Arial,sans-serif;border-bottom:1px solid #efefef;width:100px;">
+                  OLX / Mobile
+                </td>
+
+                <td class="cf" style="padding:10px 14px;color:#ff5c1a !important;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;text-align:center;font-family:'Barlow','Segoe UI',Arial,sans-serif;border-bottom:1px solid #efefef;width:100px;">
+                  Мото Зона
+                </td>
+              </tr>
+
+              <tr class="comp-row" style="background:#ffffff !important;">
+                <td class="cf mid-text" style="padding:11px 14px;color:#444444 !important;font-size:12px;font-family:'Barlow','Segoe UI',Arial,sans-serif;border-bottom:1px solid #f4f4f4;">
+                  Аудитория само от мотористи
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#dddddd !important;font-size:16px;font-weight:700;">
+                  ✗
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#ff5c1a !important;font-size:16px;font-weight:700;">
+                  ✓
+                </td>
+              </tr>
+
+              <tr bgcolor="#fafafa" class="comp-row-alt" style="background:#fafafa !important;">
+                <td class="cf mid-text" style="padding:11px 14px;color:#444444 !important;font-size:12px;font-family:'Barlow','Segoe UI',Arial,sans-serif;border-bottom:1px solid #f4f4f4;">
+                  А2 мотори с мощност за А
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#dddddd !important;font-size:16px;font-weight:700;">
+                  ✗
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#ff5c1a !important;font-size:16px;font-weight:700;">
+                  ✓
+                </td>
+              </tr>
+
+              <tr class="comp-row" style="background:#ffffff !important;">
+                <td class="cf mid-text" style="padding:11px 14px;color:#444444 !important;font-size:12px;font-family:'Barlow','Segoe UI',Arial,sans-serif;border-bottom:1px solid #f4f4f4;">
+                  Мотори, екипировка и части заедно
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#dddddd !important;font-size:16px;font-weight:700;">
+                  ✗
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#ff5c1a !important;font-size:16px;font-weight:700;">
+                  ✓
+                </td>
+              </tr>
+
+              <tr bgcolor="#fafafa" class="comp-row-alt" style="background:#fafafa !important;">
+                <td class="cf mid-text" style="padding:11px 14px;color:#444444 !important;font-size:12px;font-family:'Barlow','Segoe UI',Arial,sans-serif;border-bottom:1px solid #f4f4f4;">
+                  Достъп до съседни пазари
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#dddddd !important;font-size:16px;font-weight:700;">
+                  ✗
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;border-bottom:1px solid #f4f4f4;color:#ff5c1a !important;font-size:16px;font-weight:700;">
+                  ✓
+                </td>
+              </tr>
+
+              <tr class="comp-row" style="background:#ffffff !important;">
+                <td class="cf mid-text" style="padding:11px 14px;color:#444444 !important;font-size:12px;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+                  10 ВИП + 10 ТОП обяви безплатно
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;color:#dddddd !important;font-size:16px;font-weight:700;">
+                  ✗
+                </td>
+                <td class="cv" style="padding:11px;text-align:center;color:#ff5c1a !important;font-size:16px;font-weight:700;">
+                  ✓
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CTA -->
+        <tr>
+          <td bgcolor="#ff5c1a" class="pad orange-bg" style="background:#ff5c1a !important;padding:36px 44px;text-align:center;">
+
+            <div class="gmail-blend-screen">
+              <div class="gmail-blend-difference">
+
+                <div class="force-muted-white gmail-muted" style="color:rgba(255,255,255,0.78) !important;font-size:10px;letter-spacing:3px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;margin-bottom:10px;">
+                  Готови да говорим?
+                </div>
+
+                <div class="force-white gmail-white" style="color:#ffffff !important;font-size:26px;font-weight:900;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;text-transform:uppercase;margin-bottom:22px;line-height:1.2;">
+                  Имате интерес?<br>
+                  Отговорете директно на това съобщение<br>
+                  и ние ще се погрижим за всичко останало.
+                </div>
+
+                <a class="cta-btn" href="https://moto-zona.com" style="display:inline-block;background:#ffffff !important;color:#ff5c1a !important;text-decoration:none;font-size:13px;font-weight:800;padding:15px 42px;border-radius:8px;font-family:'Barlow Condensed','Segoe UI',Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;">
+                  moto-zona.com &rarr;
+                </a>
+
+                <div class="force-muted-white gmail-muted" style="margin-top:18px;color:rgba(255,255,255,0.86) !important;font-size:12px;font-family:'Barlow','Segoe UI',Arial,sans-serif;line-height:2;">
+                  <a href="mailto:mishoispaneca@gmail.com" class="force-white gmail-white" style="color:#ffffff !important;text-decoration:none;">
+                    mishoispaneca@gmail.com
+                  </a>
+                  &nbsp;&middot;&nbsp;
+                  <a href="tel:0888858009" class="force-white gmail-white" style="color:#ffffff !important;text-decoration:none;">
+                    0888858009
+                  </a>
+                </div>
+
+              </div>
+            </div>
+
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td class="pad white footer-bg" bgcolor="#f8f8f8" style="background:#f8f8f8 !important;border-top:1px solid #efefef;padding:16px 44px;text-align:center;">
+            <div class="footer-text" style="color:#cccccc !important;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-family:'Barlow','Segoe UI',Arial,sans-serif;">
+              &copy; 2026 &nbsp;&middot;&nbsp;
+              <strong class="footer-strong" style="color:#bbbbbb !important;">Мото Зона</strong>
+              &nbsp;&middot;&nbsp; Всичко за един моторист на едно място
+            </div>
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+</body>
+</html>
