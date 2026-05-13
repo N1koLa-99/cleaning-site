@@ -67,10 +67,13 @@
       }
     ],
     "priceRange": "$$",
-    "areaServed": {
-      "@type": "City",
-      "name": "Велико Търново"
-    },
+    "areaServed": [
+      {"@type": "City", "name": "Велико Търново"},
+      {"@type": "City", "name": "Горна Оряховица"},
+      {"@type": "City", "name": "Лясковец"},
+      {"@type": "Place", "name": "Арбанаси"},
+      {"@type": "Place", "name": "Килифарево"}
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Почистващи услуги",
@@ -107,28 +110,43 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Правите ли почистване на входове във Велико Търново?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Да, Стефанови 2024 ООД извършва редовно и еднократно почистване на входове, стълбища и общи части в жилищни сгради във Велико Търново. Работим 7 дни в седмицата. Обадете се на 0888 858 009."}
+        "name": "Правите ли почистване на входове в жилищни сгради в Търново?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, Стефанови 2024 ООД извършва редовно и еднократно почистване на входове, стълбища и общи части в жилищни сгради из целия Велико Търново. Предлагаме абонаментни договори. Обадете се на 0888 858 009."}
       },
       {
         "@type": "Question",
-        "name": "Почиствате ли прозорци в апартаменти и офиси?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Да, извършваме почистване на прозорци вътре и отвън за апартаменти, офиси и търговски обекти. Без ивици, без следи."}
+        "name": "Колко струва почистването на апартамент?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Цената зависи от квадратурата и вида почистване. Предлагаме безплатна консултация — обадете се на 0888 858 009 и ще изготвим индивидуална оферта до 30 минути."}
       },
       {
         "@type": "Question",
-        "name": "Правите ли извозване на боклуци и стари мебели?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Да, извозваме стари мебели, строителни отпадъци и всякакви отпадъци бързо и законно. Обадете се за оферта: 0888 858 009."}
+        "name": "Почиствате ли прозорци отвън при по-горни етажи?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, извършваме почистване на прозорци вътре и отвън за всички етажи — с подходящо оборудване, без ивици или следи. Услугата е за апартаменти, офиси и търговски обекти."}
+      },
+      {
+        "@type": "Question",
+        "name": "Правите ли извозване на стари мебели и боклуци?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, извозваме стари мебели, строителни отпадъци и всякакви отпадъци бързо и законно в Велико Търново и близките общини. За оферта: 0884 853 000."}
       },
       {
         "@type": "Question",
         "name": "Почиствате ли мазета?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Да, почистваме мазета и изнасяме стари вещи. Услугата е достъпна за жители на Велико Търново."}
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, почистваме мазета, тавански помещения и складови пространства. Организираме и изнасянето на ненужни вещи при желание."}
       },
       {
         "@type": "Question",
-        "name": "Колко струва почистването на апартамент във Велико Търново?",
-        "acceptedAnswer": {"@type": "Answer", "text": "Цените зависят от площта и вида почистване. Свържете се с нас за безплатна консултация: 0888 858 009 (Милен) или 0884 853 000 (Ася)."}
+        "name": "Работите ли в събота и неделя?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Работим всеки ден от понеделник до неделя, включително официални празници — от 07:00 до 21:00 ч."}
+      },
+      {
+        "@type": "Question",
+        "name": "Какви препарати използвате — безопасни ли са за деца?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Използваме само сертифицирани еко продукти — биоразградими, без хлор и агресивни химикали. Безопасни за деца, домашни любимци и хора с алергии."}
+      },
+      {
+        "@type": "Question",
+        "name": "Правите ли генерално почистване след ремонт?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Да, специализираме в генерално почистване след ремонт: прах, варови петна, лепенки. Резултатът е готов за обитаване."}
       }
     ]
   }
@@ -865,6 +883,34 @@ button { border: none; cursor: pointer; font-family: inherit; }
 }
 
 /* ═══════════════════════════════════════════
+   FAQ
+═══════════════════════════════════════════ */
+.faq__header { text-align: center; margin-bottom: 52px; }
+.faq__list { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+details.faq__item { border: 1.5px solid var(--gray-2); border-radius: var(--r-md); overflow: hidden; background: var(--white); }
+details.faq__item[open] { border-color: var(--blue); }
+summary.faq__q {
+  padding: 20px 24px; cursor: pointer; font-weight: 700; font-size: 1rem;
+  list-style: none; display: flex; justify-content: space-between; align-items: center;
+  color: var(--dark); gap: 16px;
+}
+summary.faq__q::-webkit-details-marker { display: none; }
+summary.faq__q::after { content: "+"; font-size: 1.5rem; font-weight: 400; color: var(--blue); flex-shrink: 0; }
+details[open] summary.faq__q::after { content: "−"; }
+.faq__a { padding: 0 24px 20px; color: var(--gray-5); line-height: 1.75; font-size: .95rem; }
+
+/* ═══════════════════════════════════════════
+   AREAS
+═══════════════════════════════════════════ */
+.areas { background: var(--gray-1); }
+.areas__header { text-align: center; margin-bottom: 36px; }
+.areas__grid { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; max-width: 860px; margin: 0 auto; }
+.areas__tag {
+  background: var(--white); border: 1.5px solid var(--gray-2); border-radius: 999px;
+  padding: 8px 18px; font-size: .88rem; font-weight: 600; color: var(--gray-5);
+}
+
+/* ═══════════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════════ */
 .footer { background: var(--dark); padding: 64px 0 32px; }
@@ -1559,6 +1605,7 @@ p, li, .section-sub, .hero__sub {
         <li><a href="#about">За нас</a></li>
         <li><a href="#services">Услуги</a></li>
         <li><a href="#process">Как работим</a></li>
+        <li><a href="#faq">Въпроси</a></li>
         <li><a href="#contact">Контакт</a></li>
       </ul>
       <a href="#contact" class="nav__cta">Заявете почистване</a>
@@ -1690,7 +1737,7 @@ p, li, .section-sub, .hero__sub {
       <div class="anim">
         <span class="eyebrow">За нас</span>
         <h2 class="section-title">
-          Повече от почистване
+          Почистване във<br>Велико Търново<br><span style="color:var(--blue);">с гаранция за качество</span>
         </h2>
         <p class="section-sub">
           Стефанови 2024 ООД е компания за професионално почистване във Велико Търново, специализирана в поддръжката на входове, апартаменти, частни домове, офиси, магазини, прозорци и мазета, както и извозване на боклуци. Работим с обучени специалисти, качествени еко препарати и гарантиран резултат.
@@ -1744,7 +1791,7 @@ p, li, .section-sub, .hero__sub {
 
       <div class="svc-info">
         <span class="eyebrow eyebrow--white">Нашите услуги</span>
-        <h2 class="section-title section-title--white">Всичко<br>от което<br>се нуждаете</h2>
+        <h2 class="section-title section-title--white">Услуги за<br>почистване<br>Велико Търново</h2>
         <p class="section-sub section-sub--white">Входове, апартаменти, домове, офиси, магазини, прозорци, мазета и извозване на боклуци — всичко на едно място.</p>
         <div class="svc-counter">
           <span class="svc-counter__cur">01</span>
@@ -2085,7 +2132,7 @@ p, li, .section-sub, .hero__sub {
       </div>
       <div>
         <span class="eyebrow">Защо Стефанови 2024</span>
-        <h2 class="section-title anim">Разликата,<br>която усещате.</h2>
+        <h2 class="section-title anim">Защо да изберете<br>Стефанови 2024<br>за Велико Търново?</h2>
         <div class="why__features">
           <div class="why-feat anim">
             <div class="why-feat__ico" style="background:#eff6ff;color:var(--green);">
@@ -2129,6 +2176,84 @@ p, li, .section-sub, .hero__sub {
   </div>
 </section>
 
+<!-- ═══════════════ FAQ ══════════════════ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="faq__header anim">
+      <span class="eyebrow">Въпроси и отговори</span>
+      <h2 class="section-title">Често задавани въпроси<br>за почистване в Търново</h2>
+    </div>
+    <div class="faq__list">
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Правите ли почистване на входове в жилищни сгради в Търново?</summary>
+        <div class="faq__a">Да — Стефанови 2024 ООД извършва редовно и еднократно почистване на входове, стълбища и общи части на жилищни сгради из целия град. Предлагаме абонаментни договори на изгодни цени. Обадете се на <strong>0888 858 009</strong> или <strong>0884 853 000</strong>.</div>
+      </details>
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Колко струва почистването на апартамент?</summary>
+        <div class="faq__a">Цената зависи от квадратурата, типа почистване (поддържащо или генерално) и допълнителни услуги. Предлагаме безплатна консултация — обадете се на <strong>0888 858 009</strong> и ще изготвим индивидуална оферта до 30 минути.</div>
+      </details>
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Почиствате ли прозорци отвън при по-горни етажи?</summary>
+        <div class="faq__a">Да, извършваме почистване на прозорци вътре и отвън за всички етажи — с подходящо оборудване, без оставяне на ивици или следи. Услугата е подходяща за апартаменти, офиси и търговски обекти.</div>
+      </details>
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Правите ли извозване на стари мебели и боклуци?</summary>
+        <div class="faq__a">Да — извозваме стари мебели, строителни отпадъци, уреди и всякакви отпадъци бързо и законно. Услугата се извършва в рамките на Велико Търново и близките общини. За оферта: <strong>0884 853 000</strong>.</div>
+      </details>
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Почиствате ли мазета?</summary>
+        <div class="faq__a">Да — почистваме мазета, тавански помещения и складови пространства. Организираме и изнасянето на ненужни вещи при желание от ваша страна.</div>
+      </details>
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Работите ли в събота и неделя?</summary>
+        <div class="faq__a">Работим всеки ден от понеделник до неделя, включително официални празници — от 07:00 до 21:00 ч. Можете да заявите услуга за следващия ден.</div>
+      </details>
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Какви препарати използвате — безопасни ли са за деца?</summary>
+        <div class="faq__a">Използваме само сертифицирани еко продукти — биоразградими, без хлор и агресивни химикали. Те са напълно безопасни за деца, домашни любимци и хора с алергии.</div>
+      </details>
+
+      <details class="faq__item anim">
+        <summary class="faq__q">Правите ли генерално почистване след ремонт?</summary>
+        <div class="faq__a">Да — специализираме в генерално почистване след ремонт: отстраняване на строителни прахове, варови петна, лепенки и боядисани повърхности. Резултатът е готов за обитаване.</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ AREAS ═════════════════ -->
+<section class="section areas">
+  <div class="container">
+    <div class="areas__header anim">
+      <span class="eyebrow">Обхват на дейност</span>
+      <h2 class="section-title">Почистване в Търново<br>и региона</h2>
+      <p class="section-sub">Обслужваме Велико Търново и всички близки общини и квартали.</p>
+    </div>
+    <div class="areas__grid anim">
+      <span class="areas__tag">Велико Търново — Център</span>
+      <span class="areas__tag">Велико Търново — Колю Фичето</span>
+      <span class="areas__tag">Велико Търново — Картала</span>
+      <span class="areas__tag">Велико Търново — Варуша</span>
+      <span class="areas__tag">Велико Търново — Акация</span>
+      <span class="areas__tag">Велико Търново — Бойчевци</span>
+      <span class="areas__tag">Горна Оряховица</span>
+      <span class="areas__tag">Лясковец</span>
+      <span class="areas__tag">Килифарево</span>
+      <span class="areas__tag">Арбанаси</span>
+      <span class="areas__tag">Дебелец</span>
+      <span class="areas__tag">Самоводене</span>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════ CONTACT ════════════ -->
 <section class="section section--blue" id="contact">
   <div class="container">
@@ -2136,7 +2261,7 @@ p, li, .section-sub, .hero__sub {
 
       <div>
         <span class="eyebrow eyebrow--white">Контакт</span>
-        <h2 class="section-title section-title--white anim">Свържете се с нас</h2>
+        <h2 class="section-title section-title--white anim">Заявете почистване<br>във Велико Търново</h2>
         <p class="section-sub section-sub--white anim">Изпратете ни запитване и ще отговорим до 1 час. Безплатна консултация и оглед.</p>
         <div class="contact__items anim">
           <div class="contact__item">
