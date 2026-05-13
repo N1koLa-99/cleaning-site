@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://stefanovi2024.bg/sitemap.xml
+Sitemap: https://stefanovi-cleaning.com/sitemap.xml
