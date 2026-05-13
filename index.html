@@ -86,10 +86,7 @@
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Генерално почистване", "areaServed": "Велико Търново"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Почистване на мазе", "areaServed": "Велико Търново"}},
         {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Извозване на боклуци", "areaServed": "Велико Търново"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Почистване на прозорци", "areaServed": "Велико Търново"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Абонаментно почистване", "areaServed": "Велико Търново"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Почистване след ремонт", "areaServed": "Велико Търново"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Airbnb почистване", "areaServed": "Велико Търново"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Почистване на прозорци", "areaServed": "Велико Търново"}}
       ]
     },
     "aggregateRating": {
@@ -910,42 +907,6 @@ button { border: none; cursor: pointer; font-family: inherit; }
   font-size: .8rem; color: var(--gray-4); margin: 8px 0 0; line-height: 1.6;
 }
 
-/* ═══════════════════════════════════════════
-   PRICING
-═══════════════════════════════════════════ */
-.pricing { background: var(--gray-1); }
-.pricing__header { text-align: center; margin-bottom: 52px; }
-.pricing__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-.price-card {
-  background: var(--white); border-radius: var(--r-lg); padding: 36px 28px;
-  border: 1.5px solid var(--gray-2); display: flex; flex-direction: column; gap: 6px;
-  transition: box-shadow .25s, border-color .25s;
-}
-.price-card:hover { box-shadow: var(--shadow-l); border-color: var(--blue); }
-.price-card--featured {
-  border-color: var(--blue); background: var(--blue); color: var(--white);
-}
-.price-card__tag {
-  font-size: .75rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
-  color: var(--blue); margin-bottom: 4px;
-}
-.price-card--featured .price-card__tag { color: rgba(255,255,255,.7); }
-.price-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 4px; }
-.price-card--featured h3 { color: var(--white); }
-.price-card__price {
-  font-size: 2rem; font-weight: 900; color: var(--dark); line-height: 1; margin: 8px 0;
-}
-.price-card--featured .price-card__price { color: var(--white); }
-.price-card__price span { font-size: 1rem; font-weight: 500; }
-.price-card__list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 12px 0 0; }
-.price-card__list li { font-size: .9rem; color: var(--gray-5); display: flex; gap: 8px; align-items: flex-start; }
-.price-card--featured .price-card__list li { color: rgba(255,255,255,.8); }
-.price-card__list li::before { content: "✓"; color: var(--green); font-weight: 700; flex-shrink: 0; }
-.price-card--featured .price-card__list li::before { color: rgba(255,255,255,.9); }
-.price-card__note { font-size: .78rem; color: var(--gray-4); margin-top: 12px; }
-.price-card--featured .price-card__note { color: rgba(255,255,255,.55); }
-.pricing__note { text-align: center; margin-top: 32px; font-size: .9rem; color: var(--gray-4); }
-@media(max-width:900px){ .pricing__grid { grid-template-columns: 1fr; } }
 
 /* ═══════════════════════════════════════════
    FAQ
@@ -1669,7 +1630,6 @@ p, li, .section-sub, .hero__sub {
       <ul class="nav__links">
         <li><a href="#about">За нас</a></li>
         <li><a href="#services">Услуги</a></li>
-        <li><a href="#prices">Цени</a></li>
         <li><a href="#faq">Въпроси</a></li>
         <li><a href="#contact">Контакт</a></li>
       </ul>
@@ -2241,62 +2201,6 @@ p, li, .section-sub, .hero__sub {
   </div>
 </section>
 
-<!-- ═══════════════ PRICING ══════════════ -->
-<section class="section pricing" id="prices">
-  <div class="container">
-    <div class="pricing__header anim">
-      <span class="eyebrow">Ориентировъчни цени</span>
-      <h2 class="section-title">Прозрачни цени за<br>почистване в Търново</h2>
-      <p class="section-sub">Без скрити такси. Финалната цена зависи от конкретния обект — свържете се за точна оферта.</p>
-    </div>
-    <div class="pricing__grid anim">
-
-      <div class="price-card">
-        <span class="price-card__tag">Жилища</span>
-        <h3>Почистване на апартамент</h3>
-        <div class="price-card__price">от 60<span> лв.</span></div>
-        <ul class="price-card__list">
-          <li>1-стаен апартамент — от 60 лв.</li>
-          <li>2-стаен апартамент — от 90 лв.</li>
-          <li>3-стаен апартамент — от 130 лв.</li>
-          <li>Генерално почистване — от 150 лв.</li>
-          <li>Почистване след ремонт — от 180 лв.</li>
-        </ul>
-        <p class="price-card__note">* Цената варира спрямо квадратура и замърсяване</p>
-      </div>
-
-      <div class="price-card price-card--featured">
-        <span class="price-card__tag">Абонамент</span>
-        <h3>Абонаментно почистване</h3>
-        <div class="price-card__price">от 50<span> лв./мес.</span></div>
-        <ul class="price-card__list">
-          <li>Входове — абонамент от 50 лв./мес.</li>
-          <li>Апартаменти — 1-2 пъти месечно</li>
-          <li>Офиси — ежедневно или седмично</li>
-          <li>Фиксиран ден и час</li>
-          <li>Предимство пред еднократни клиенти</li>
-        </ul>
-        <p class="price-card__note">* Абонаментът осигурява по-добра цена</p>
-      </div>
-
-      <div class="price-card">
-        <span class="price-card__tag">Специализирани</span>
-        <h3>Допълнителни услуги</h3>
-        <div class="price-card__price">от 50<span> лв.</span></div>
-        <ul class="price-card__list">
-          <li>Почистване на прозорци — от 50 лв.</li>
-          <li>Почистване на мазе — от 70 лв.</li>
-          <li>Извозване на боклуци — от 80 лв.</li>
-          <li>Офис почистване — по договаряне</li>
-          <li>Airbnb почистване — по договаряне</li>
-        </ul>
-        <p class="price-card__note">* Цените са ориентировъчни</p>
-      </div>
-
-    </div>
-    <p class="pricing__note anim">За точна оферта се обадете на <strong>0888 858 009</strong> (Милен) или <strong>0884 853 000</strong> (Ася) — отговаряме до 30 минути.</p>
-  </div>
-</section>
 
 <!-- ═══════════════ FAQ ══════════════════ -->
 <section class="section" id="faq">
