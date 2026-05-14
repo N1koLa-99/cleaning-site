@@ -14,6 +14,8 @@
   <meta name="geo.region" content="BG-04" />
   <meta name="geo.placename" content="Велико Търново" />
   <link rel="canonical" href="https://stefanovi-cleaning.com/" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
   <!-- ═══ OPEN GRAPH (Facebook, Viber, WhatsApp споделяне) ═════════════ -->
   <meta property="og:type" content="website" />
@@ -22,16 +24,16 @@
   <meta property="og:title" content="Почистване Велико Търново | Входове, Апартаменти, Офиси, Прозорци, Мазета | Стефанови 2024 ООД" />
   <meta property="og:description" content="Почистване на входове, апартаменти, домове, офиси, магазини, прозорци, мазета и извозване на боклуци във Велико Търново. 4.9★ от 1 200+ отзива. 0888 858 009" />
   <meta property="og:url" content="https://stefanovi-cleaning.com/" />
-  <meta property="og:image" content="https://stefanovi-cleaning.com/CleaningApertment-optimized.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Почистване на апартамент - Стефанови 2024 ООД Велико Търново" />
+  <meta property="og:image" content="https://stefanovi-cleaning.com/logo-optimized.png" />
+  <meta property="og:image:width" content="768" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="Стефанови 2024 ООД — Почистване Велико Търново" />
 
   <!-- ═══ TWITTER CARD ════════════════════════════════════════════════════ -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Почистване Велико Търново — Стефанови 2024 ООД" />
   <meta name="twitter:description" content="Входове, апартаменти, прозорци, мазета, извозване на боклуци. 4.9★ от 1 200+ отзива. 0888 858 009" />
-  <meta name="twitter:image" content="https://stefanovi-cleaning.com/CleaningApertment-optimized.jpg" />
+  <meta name="twitter:image" content="https://stefanovi-cleaning.com/logo-optimized.png" />
 
   <!-- ═══ STRUCTURED DATA — LocalBusiness (JSON-LD) ═══════════════════ -->
   <script type="application/ld+json">
@@ -323,11 +325,14 @@ button { border: none; cursor: pointer; font-family: inherit; }
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav__logo {
-  font-size: 1.5rem; font-weight: 900; letter-spacing: 2px;
-  color: var(--white);
+  display: flex; align-items: center;
 }
-.nav.stuck .nav__logo { color: var(--dark); }
-.nav__logo span { color: var(--green); }
+.nav__logo img {
+  height: 44px; width: auto;
+  filter: brightness(0) invert(1);
+  transition: filter .35s;
+}
+.nav.stuck .nav__logo img { filter: none; }
 .nav__links {
   display: flex; gap: 36px;
 }
@@ -952,8 +957,8 @@ details[open] summary.faq__q::after { content: "−"; }
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .footer__brand { display: flex; flex-direction: column; }
-.footer__logo { font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; color: var(--white); display: block; margin-bottom: 16px; }
-.footer__logo span { color: var(--green); }
+.footer__logo { display: block; margin-bottom: 16px; }
+.footer__logo img { height: 48px; width: auto; filter: brightness(0) invert(1); }
 .footer__brand p { font-size: .87rem; color: rgba(255,255,255,.42); line-height: 1.8; max-width: 260px; }
 .footer__col h5 {
   font-size: .76rem; font-weight: 700; letter-spacing: 3px;
@@ -1213,11 +1218,8 @@ p, li, .section-sub, .hero__sub {
   padding: 20px 22px;
   border-bottom: 1px solid var(--gray-3);
 }
-.mob-drawer__logo {
-  font-size: 1.1rem; font-weight: 900;
-  letter-spacing: 1.5px; text-transform: uppercase; color: var(--dark);
-}
-.mob-drawer__logo span { color: var(--green); }
+.mob-drawer__logo { display: flex; align-items: center; }
+.mob-drawer__logo img { height: 36px; width: auto; }
 .mob-drawer__close {
   width: 38px; height: 38px; border-radius: 10px;
   background: var(--gray-1); border: none;
@@ -1635,7 +1637,7 @@ p, li, .section-sub, .hero__sub {
 <nav class="nav" id="nav">
   <div class="container">
     <div class="nav__inner">
-      <a href="#" class="nav__logo">СТЕФАНОВИ<span> 2024</span></a>
+      <a href="#" class="nav__logo"><img src="logo-optimized.png" alt="Стефанови 2024 ООД" /></a>
       <ul class="nav__links">
         <li><a href="#about">За нас</a></li>
         <li><a href="#services">Услуги</a></li>
@@ -1655,7 +1657,7 @@ p, li, .section-sub, .hero__sub {
   <div class="mob-drawer__backdrop" id="drawer-backdrop"></div>
   <div class="mob-drawer__panel">
     <div class="mob-drawer__header">
-      <span class="mob-drawer__logo">СТЕФАНОВИ<span> 2024</span></span>
+      <span class="mob-drawer__logo"><img src="logo-optimized.png" alt="Стефанови 2024 ООД" /></span>
       <button class="mob-drawer__close" id="drawer-close">✕</button>
     </div>
     <nav class="mob-drawer__nav">
@@ -2381,7 +2383,7 @@ p, li, .section-sub, .hero__sub {
   <div class="container">
     <div class="footer__top">
       <div class="footer__brand">
-        <a href="#" class="footer__logo">СТЕФАНОВИ<span> 2024</span></a>
+        <a href="#" class="footer__logo"><img src="logo-optimized.png" alt="Стефанови 2024 ООД" /></a>
         <p>Професионално почистване на входове, апартаменти, домове, офиси, магазини, прозорци, мазета и извозване на боклуци във Велико Търново.</p>
       </div>
       <div class="footer__col">
