@@ -327,11 +327,6 @@ button { border: none; cursor: pointer; font-family: inherit; }
 .nav__logo {
   display: flex; align-items: center;
 }
-.nav__logo img {
-  height: 44px; width: auto;
-  filter: brightness(0) invert(1);
-  transition: filter .35s;
-}
 .nav.stuck .nav__logo img { filter: none; }
 .nav__links {
   display: flex; gap: 36px;
@@ -1629,8 +1624,15 @@ p, li, .section-sub, .hero__sub {
   .footer__col ul a { font-size: .86rem; }
   .footer__copy { font-size: .78rem; }
 }
-.nav__logo img {
-display: none;
+.nav__logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: #fff;
+  text-decoration: none;
+}
+.nav.stuck .nav__logo {
+  color: #1a1a2e;
 }
   </style>
 </head>
@@ -1640,7 +1642,7 @@ display: none;
 <nav class="nav" id="nav">
   <div class="container">
     <div class="nav__inner">
-      <a href="#" class="nav__logo"><img src="logo-optimized.png" alt="Стефанови 2024 ООД" /></a>
+      <a href="#" class="nav__logo">СТЕФАНОВИ24</a>
       <ul class="nav__links">
         <li><a href="#about">За нас</a></li>
         <li><a href="#services">Услуги</a></li>
